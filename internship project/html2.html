@@ -1,0 +1,549 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preload" href="main.js" as="script">
+<title>Decimal to Binary Converter - Kovalski's Calculator</title>
+
+<link rel="stylesheet" href="style2.css">
+<style>.results-ad-container{min-width:300px;min-height:260px}@media (max-width:480px){.results-ad-container-outer{padding-bottom:5px}.results-ad-container{margin:auto;width:300px}}@media (max-width:330px){.results-ad-container-outer{margin-left:-5px;margin-right:-5px}}
+      .link {
+            color: blue;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .link:hover {
+            text-transform: uppercase;
+            background-color: yellow;
+        }
+</style> 
+
+
+<body>
+<div id="container" class="container">
+<div class="ad header-banner-ad ">
+</div>
+<header class="site-header">
+<div class="site-header-container">
+<div class="site-header-brand">
+<a class="site-header-brand-link"  title="Kovalski's Calculator Homepage">
+<img class="site-header-brand-logo" src="img\kovalski.png" alt="Inch Calculator logo" width="2500" height="2975">
+<span class="site-header-brand-title">Kovalski's Calculator</span>
+</a>
+</div>
+<nav id="idx_main_menu" class="site-header-nav site-header-nav-loading" role="navigation" aria-label="main menu" data-site-header-nav>
+<div class="site-header-nav-inner-wrap">
+<ul class="menu">
+
+<li class="menu-item">
+<a>Construction<br>Calculators</a>
+</li>
+<li class="menu-item">
+<a>Conversion<br>Calculators</a>
+</li>
+<li class="menu-item">
+<a>Electrical<br>Calculators</a>
+</li>
+<li class="menu-item">
+<a>Math<br>Calculators</a>
+</li>
+<li class="menu-item menu-item--hidden-mobile" data-site-header-nav-menu-item-with-submenu>
+<a href="#" id="idx-more-calculators-toggle" aria-haspopup="true" aria-expanded="false" data-site-header-nav-submenu-toggle>More</a>
+<ul class="menu-item__submenu menu-item__submenu--right-aligned menu-item__submenu--hidden" aria-labelledby="idx-more-calculators-toggle" data-site-header-nav-submenu>
+<li class="menu-item__submenu-item">
+<a>Science<br>Calculators</a>
+</li>
+<li class="menu-item__submenu-item">
+<a>Time<br>Calculators</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+</div>
+</header>
+<div class="site-header-shadow hide-print"></div>
+<div id="content" class="site-content page-layout-two-column page-type-calculator" role="main">
+<div class="main-column">
+<div class="page-content">
+<h1 id="idx_page_heading" class="page-title">Decimal to Binary Converter</h1>
+<div class="ad content-banner-ad ">
+</div>
+<div class="article-content">
+<p>
+Enter a decimal number below to convert it to a binary.
+</p>
+<div class="uc_calculator_form_wrapper">
+<div class="uc_calculator_form_chrome" data-calculator-chrome>
+<div data-calculator-chrome-inner>
+<div>
+<form class="uc_form" id="uc_binary_base_converter" name="uc_binary_base_converter" action="/binary-to-decimal-converter/" method="POST" data-calculator-form>
+<div>
+<div class="mt3">
+<label for="binary" class="bold">
+Decimal Number:
+</label>
+</div>
+</div>
+<div class="row uc_form__field_group">
+<div class=" uc_form__field_group--label_over uc_form__field_group--full_width_input uc_form__field_group__input_wrap">
+<input type="text" id="binary" name="binary" class="uc_calculator size_max " value size="8" autocomplete="off" data-input-field />
+</div>
+</div>
+<div class="display-inline-block">
+<div>
+<input type="submit" value="Convert" class="ic_button" />
+</div>
+</div>
+<div class="reverse-conversion-link">
+<a class="link link--secondary link--underline" href="index.html">Convert Binary To Decimal 🔀 <svg aria-labelledby="svg-arrow-left-right-thick-icon-label" class="ic_icon_txt_inline ml1 pointed_events_disabled" aria-hidden="true"><title id="svg-arrow-left-right-thick-icon-label">Arrow Left Right Icon</title><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-arrow-left-right-thick-icon"></use> </svg></a> </div>
+</form>
+<div class="uc_calculator_results_container uc_main_result ">
+<div class="uc_contact_form hide-print" data-contact-form-component>
+<div class="uc_calculator_results_help_open_btn_container">
+<button class="uc_calculator_results_help_open_btn visible" aria-expanded="false" aria-haspopup="true" aria-controls="idx_embedded_cf" data-content-overlay-open-trigger="idx_embedded_cf_comp" aria-label="Open contact form"><svg aria-labelledby="svg-circle-help-icon-label" class="ic_icon pointed_events_disabled"><title id="svg-circle-help-icon-label">Help Icon</title><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-circle-help-icon"></use> </svg></button>
+</div>
+<div class="content_overlay" data-content-overlay id="idx_embedded_cf_comp">
+<div id="idx_embedded_cf" class="content_overlay-content_wrap" data-content-overlay-content role="dialog" aria-modal="true" aria-labelledby="idx_embedded_cf_title">
+<div class="content_overlay-close_trigger_container">
+<button class="content_overlay-close_trigger" aria-label="Close dialog" data-content-overlay-close-trigger>
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="content_overlay-inner_content">
+<h2 id="idx_embedded_cf_title" class="mt0">Have a Question or Feedback?</h2>
+<div data-contact-form-wrapper>
+<form class="uc_form" id="uc_contact" name="uc_contact" method="POST" action="/contact/" target="_blank" data-contact-form>
+<div>
+<label for="uc_name_cr" class="visually-hidden" data-placeholder-label>
+Name (optional)
+</label>
+<input type="text" id="uc_name_cr" name="uc_name" class="mw100" value size="100" maxlength="100" placeholder="Name (optional)" autocomplete="off">
+</div>
+<div class="mt2">
+<label for="uc_b_cr" class="visually-hidden" data-placeholder-label>
+Email (optional)
+</label>
+<input type="text" id="uc_b_cr" name="uc_b" class="mw100" value size="100" maxlength="100" placeholder="Email (optional)" autocomplete="off">
+</div>
+<div class="mt2">
+<label for="uc_comment_cr" class="visually-hidden" data-placeholder-label>
+Question or Feedback
+</label>
+<textarea id="uc_comment_cr" name="uc_comment" class="mw100" rows="4" maxlength="5000" placeholder="Send us your questions or feedback" autocomplete="off"></textarea>
+</div>
+<div data-contact-form-messages></div>
+<div>
+<input type="text" name="cf_email" class="cfp" aria-label="Email" />
+<input type="hidden" name="uc_u" value="https://www.inchcalculator.com/binary-to-decimal-converter/">
+<button type="submit" value="Contact Us" class="ic_button flex flex-align-center">Contact Us<span class="uc_loading" data-contact-form-loading-indicator> <img loading="lazy" decoding="async" alt="Loading content." src="data:image/gif;base64,R0lGODlhKwALAPEAAP///4iIiMTExIiIiCH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAKwALAAACMoSOCMuW2diD88UKG95W88uF4DaGWFmhZid93pq+pwxnLUnXh8ou+sSz+T64oCAyTBUAACH5BAkKAAAALAAAAAArAAsAAAI9xI4IyyAPYWOxmoTHrHzzmGHe94xkmJifyqFKQ0pwLLgHa82xrekkDrIBZRQab1jyfY7KTtPimixiUsevAAAh+QQJCgAAACwAAAAAKwALAAACPYSOCMswD2FjqZpqW9xv4g8KE7d54XmMpNSgqLoOpgvC60xjNonnyc7p+VKamKw1zDCMR8rp8pksYlKorgAAIfkECQoAAAAsAAAAACsACwAAAkCEjgjLltnYmJS6Bxt+sfq5ZUyoNJ9HHlEqdCfFrqn7DrE2m7Wdj/2y45FkQ13t5itKdshFExC8YCLOEBX6AhQAADsAAAAAAAAAAAA=" width="43" height="11"></span></button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h2 id="idx_results_container_heading" class="uc_calculator_results_container_heading" data-calculator-results-container-heading>Binary Number:</h2>
+<div></div>
+<div class="uc_calculator_result">
+<div class="top-padded">
+<div class="uc_calculator_results_value">&nbsp;</div>
+</div>
+</div>
+<div class="uc_calculator_result">
+<h3>
+Steps to Convert to Decimal </h3>
+<div>
+<div class="uc_calculator_results_value uc_calculator_results_value--max-width">&nbsp;<br>&nbsp</div>
+</div>
+</div>
+<div class="mt6 hide-print">
+<div>
+Learn how we calculated this <a class="link--secondary link--underline" href="#idx_how_calculator_works" onclick="gtag('event','results_how_to_click',{'event_category':'calculator','event_label':'Learn how we calculated this below'});">below</a>
+<p>
+<a class="link--secondary link--underline small" href="#idx_how_calculator_works" onclick="gtag('event','results_how_to_click',{'event_category':'calculator','event_label':'arrow down chevron icon'});">
+<svg aria-labelledby="svg-chevron-down-thick-icon-label" class="ic_icon_txt_inline pointed_events_disabled" aria-hidden="true"><title id="svg-chevron-down-thick-icon-label">Chevron Down Icon</title><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-chevron-down-thick-icon"></use> </svg> <span class="visually-hidden">scroll down</span>
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr>
+<section class="uc_toc_wrapper" id="table_of_contents_component">
+<h2 class="uc_toc_heading">On this page:</h2>
+<ul class="uc_toc_list" id="idx_toc_list_items">
+<li class="uc_toc_elem_level_2">
+<a href="#idx_page_heading" onclick="gtag('event','link_click',{'event_category':'table_of_contents','event_label':'Binary to Decimal Converter'});">
+Decimal to Binary Converter </a>
+</li>
+<li class="uc_toc_elem_level_2">
+<a href="#idx_how_to_convert_binary_to_decimal" onclick="gtag('event','link_click',{'event_category':'table_of_contents','event_label':'How to Convert Binary to Decimal'});">
+How to Convert Decimal to Binary </a>
+</li>
+<li class="uc_toc_elem_level_3">
+<a href="#idx_binary_to_decimal_formula" onclick="gtag('event','link_click',{'event_category':'table_of_contents','event_label':'Binary to Decimal Formula'});">
+Steps to Convert </a>
+</li>
+<li class="uc_toc_elem_level_2">
+<a href="#idx_how_to_convert_fractional_binary_numbers_to_decimal" onclick="gtag('event','link_click',{'event_category':'table_of_contents','event_label':'How to Convert Fractional Binary Numbers to Decimal'});">
+How to Convert Fractional Decimal Numbers to Binary </a>
+</li>
+<li class="uc_toc_elem_level_2">
+<a href="#idx_binary_to_decimal_conversion_table" onclick="gtag('event','link_click',{'event_category':'table_of_contents','event_label':'Binary to Decimal Conversion Table'});">
+Decimal to Binary Conversion Table </a>
+</li>
+<li class="uc_toc_elem_level_2">
+<a href="#idx_frequently_asked_questions" onclick="gtag('event','link_click',{'event_category':'table_of_contents','event_label':'Frequently Asked Questions'});">
+Frequently Asked Questions </a>
+</li>
+</ul>
+</section>
+<hr>
+</div>
+</div>
+
+</div>
+<div id="idx_how_calculator_works">
+</div>
+<h2 id="idx_how_to_convert_binary_to_decimal">How to Convert Decimal to Binary </h2>
+<p>
+    The decimal number system is the number system most of us use every day. The decimal system, also referred to as <em>denary</em>, is a base 10 number system, which means it is composed of 10 digits, 0, 1, 2, 3, 4, 5, 6, 7, 8 &#038; 9.
+    </p>
+    <p>
+    Binary numbers, also referred to as base 2 numbers, are the foundation of computing systems because they consist of only two digits, 0 and 1. This allows them to easily be used with electrical and mechanical switches. Binary numbers can also be used with modern transistors that make up modern computer processors.
+    </p>
+    <p>
+    You might be wondering how to convert from a decimal number to a binary number when these number systems do not use the same digits. To answer this, we need to dig in a little bit on how a binary number works.
+    </p>
+    <p>
+    A binary number is read from right to left, with the least significant bit being the digit on the far right end of the number and the most significant bit being the digit on the far left end.
+    </p>
+<h3 id="idx_binary_to_decimal_formula">Steps to Convert</h3>
+<p>
+    Now that you understand the representation of a base 2 number, you can convert from decimal to binary using successive division by 2. Whoa! I bet you&#8217;re probably wondering what that means!.
+    </p>
+    <p>
+    To use the successive division by two method, divide the decimal number by 2 using long division. There should be a remainder of 0 or 1; write that to the side of the division problem.
+    </p>
+    <p>
+    Take the result of the first division problem and divide that by 2 again. Like before, there should be a remainder of 0 or 1, which you should write to the side of the problem.
+    </p>
+    <p>
+    Continue this process until the result is 0.
+    </p>
+    <p>
+    The remainders that you wrote to the side of the division problems are the resulting binary number. The number should be read from the bottom to the top since the least significant digit will be at the top, and the most significant digit will be at the bottom.
+    </p>
+<div class="article-thumbnail article-thumbnail-width-80">
+<img loading="lazy" decoding="async" src="img\img4.png" alt="graphic showing how to convert a binary number to decimal" width="1280" height="1350" class="alignnone size-full wp-image-8436" srcset="img\img4.png 1280w, img\img4.png 616w, img\img4.png 768w, img\img4.png 624w" sizes="(max-width: 1280px) 100vw, 1280px" />
+</div>
+
+<div class="panel">
+    <p>
+        <strong>For example,</strong> let&#8217;s convert 25 from base 10 to base 2.
+        </p>
+        <p>
+        <span class="formula">25 &divide; 2 = 12 R 1 (LSB)</span><br/>
+        <span class="formula">12 &divide; 2 = 6 R 0</span><br/>
+        <span class="formula">6 &divide; 2 = 3 R 0</span><br/>
+        <span class="formula">3 &divide; 2 = 1 R 1</span><br/>
+        <span class="formula">1 &divide; 2 = 0 R 1 (MSB)</span>
+        </p>
+        <p>
+        Reading the remainders from the bottom up is 11001, so 25<sub>10</sub> is equivalent to 11001<sub>2</sub>.
+        </p>
+</div>
+<h2 id="idx_how_to_convert_fractional_binary_numbers_to_decimal">How to Convert Fractional Decimal Numbers to Binary</h2>
+<p>
+    To convert fractional decimal value to binary, multiply the fractional portion of the decimal by 2. If the result is greater than 1, then subtract 1 from the result and note that the binary bit will be a 1; otherwise, the binary bit will be a 0.
+    </p>
+    <p>
+    Continue multiplying by 2 until the resulting decimal value is equal to zero. The fractional result in binary is the remainder 0 and 1 values in order.</p>
+    <div class="panel">
+        <p>
+        <strong>For example,</strong> let&#8217;s convert 0.25 from decimal to binary.
+        </p>
+        <p>
+        0.25 &times; 2 = 0.5 + 0<br/>
+        0.5 &times; 2 = 0 + 1
+        </p>
+        <p>
+        So, the fractional binary value is equal to 0.01
+        </p>
+        </div>
+<h2 id="idx_binary_to_decimal_conversion_table">Decimal to Binary Conversion Table</h2>
+<p>
+    The table below shows decimal numbers and the equivalent binary number values.
+    </p>
+    <table class="table table-bordered table-striped">
+    <caption class="caption-bottom">Decimal numbers converted to the equivalent binary values</caption>
+    <thead>
+    <tr>
+    <th>Decimal Number</th>
+    <th>Binary Number</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td>0</td>
+    <td>0</td>
+    </tr>
+    <tr>
+    <td>1</td>
+    <td>1</td>
+    </tr>
+    <tr>
+    <td>2</td>
+    <td>10</td>
+    </tr>
+    <tr>
+    <td>3</td>
+    <td>11</td>
+    </tr>
+    <tr>
+    <td>4</td>
+    <td>100</td>
+    </tr>
+    <tr>
+    <td>5</td>
+    <td>101</td>
+    </tr>
+    <tr>
+    <td>6</td>
+    <td>110</td>
+    </tr>
+    <tr>
+    <td>7</td>
+    <td>111</td>
+    </tr>
+    <tr>
+    <td>8</td>
+    <td>1000</td>
+    </tr>
+    <tr>
+    <td>9</td>
+    <td>1001</td>
+    </tr>
+    <tr>
+    <td>10</td>
+    <td>1010</td>
+    </tr>
+    <tr>
+    <td>11</td>
+    <td>1011</td>
+    </tr>
+    <tr>
+    <td>12</td>
+    <td>1100</td>
+    </tr>
+    <tr>
+    <td>13</td>
+    <td>1101</td>
+    </tr>
+    <tr>
+    <td>14</td>
+    <td>1110</td>
+    </tr>
+    <tr>
+    <td>15</td>
+    <td>1111</td>
+    </tr>
+    <tr>
+    <td>16</td>
+    <td>10000</td>
+    </tr>
+    <tr>
+    <td>17</td>
+    <td>10001</td>
+    </tr>
+    <tr>
+    <td>18</td>
+    <td>10010</td>
+    </tr>
+    <tr>
+    <td>19</td>
+    <td>10011</td>
+    </tr>
+    <tr>
+    <td>20</td>
+    <td>10100</td>
+    </tr>
+    <tr>
+    <td>21</td>
+    <td>10101</td>
+    </tr>
+    <tr>
+    <td>22</td>
+    <td>10110</td>
+    </tr>
+    <tr>
+    <td>23</td>
+    <td>10111</td>
+    </tr>
+    <tr>
+    <td>24</td>
+    <td>11000</td>
+    </tr>
+    <tr>
+    <td>25</td>
+    <td>11001</td>
+    </tr>
+    <tr>
+    <td>26</td>
+    <td>11010</td>
+    </tr>
+    <tr>
+    <td>27</td>
+    <td>11011</td>
+    </tr>
+    <tr>
+    <td>28</td>
+    <td>11100</td>
+    </tr>
+    <tr>
+    <td>29</td>
+    <td>11101</td>
+    </tr>
+    <tr>
+    <td>30</td>
+    <td>11110</td>
+    </tr>
+    <tr>
+    <td>31</td>
+    <td>11111</td>
+    </tr>
+    <tr>
+    <td>32</td>
+    <td>100000</td>
+    </tr>
+    <tr>
+    <td>64</td>
+    <td>1000000</td>
+    </tr>
+    <tr>
+    <td>128</td>
+    <td>10000000</td>
+    </tr>
+    <tr>
+    <td>256</td>
+    <td>100000000</td>
+    </tr>
+    <tr>
+    <td>512</td>
+    <td>1000000000</td>
+    </tr>
+    <tr>
+    <td>1024</td>
+    <td>10000000000</td>
+    </tr>
+    <tr>
+    <td>2048</td>
+    <td>100000000000</td>
+    </tr>
+    </tbody>
+    </table>
+<h2 id="idx_frequently_asked_questions">Frequently Asked Questions</h2>
+<h3 data-toc-exclude class="small">What are the advantages of decimal to binary conversion?</h3>
+<div><p>Binary is easier for computers to store and manipulate, and the binary system is more efficient to use in mathematical operations.</p></div>
+<h3 data-toc-exclude class="small">When would you convert from decimal to binary?</h3>
+<div><p>You would convert decimal to binary when you have information that you need a computer system to process.</p></div>
+<h3 data-toc-exclude class="small">Is binary code still used?</h3>
+<div><p>Yes, binary code is still widely used and is the base of modern computer systems.</p></div>
+</div>
+</div>
+
+</div>
+</div>
+<div class="sidebar sidebar-right" id="page_sidebar">
+<div class="ad sidebar-ad sidebar-ad--fixed-height">
+</div>
+<div class="ad sidebar-ad ">
+</div>
+</div>
+</div>
+<footer id="idx_site_footer" class="site_footer">
+<div class="site_footer_brand">
+<img src="img\kovalski.png" class="site_footer_brand_logo" alt="Inch Calculator logo" width="2000" height="2475">
+<span class="site_footer_brand_title">Kovalski's Calculator</span>
+</div>
+<div class="center site_footer_upper">
+<div class="site_footer_site_links">
+<nav aria-labelledby="idx_footer_nav_header">
+<h2 id="idx_footer_nav_header" class="mb3">About</h2>
+<ul>
+<li class="mb2 bold"><a>Widgets</a></li>
+<li class="mb2 bold"><a>Mobile Apps</a></li>
+<li class="mb2 bold"><a>Terms of Use</a></li>
+<li class="mb2 bold"><a>Privacy Policy</a></li>
+<li class="mb2 bold"><a>Accessibility Statement</a></li>
+<li class="mb2 bold"><a>Sitemap</a></li>
+</ul>
+</nav>
+<hr>
+</div>
+</div>
+<div class="pt4 center site_footer_dark">
+<div class="pb4 pl4 pr4 site_copyright">
+&copy;2024 kovalski Hub, LLC | kovalski'scalculator.com
+</div>
+</div>
+</footer>
+</div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Get form elements
+    const form = document.getElementById('uc_binary_base_converter');
+    const decimalInput = document.getElementById('binary');  // Renamed for clarity
+    const resultContainer = document.querySelector('.uc_calculator_result');
+    const stepsContainer = document.querySelector('.uc_calculator_results_value.uc_calculator_results_value--max-width');
+
+    // Function to convert decimal to binary
+    function decimalToBinary(decimal) {
+        if (!/^\d+$/.test(decimal)) {
+            return "Invalid decimal number";
+        }
+        return parseInt(decimal, 10).toString(2);
+    }
+
+    // Handle form submission
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent actual form submission
+
+        const decimalValue = decimalInput.value.trim();
+        const binaryResult = decimalToBinary(decimalValue);
+
+        // Display the result
+        resultContainer.querySelector('.uc_calculator_results_value').textContent = binaryResult;
+        
+        // Display the steps
+        let decimal = parseInt(decimalValue, 10);
+        let steps = [];
+        while (decimal > 0) {
+            let remainder = decimal % 2;
+            steps.push(`${decimal} / 2 = ${Math.floor(decimal / 2)} (remainder: ${remainder})`);
+            decimal = Math.floor(decimal / 2);
+        }
+
+        stepsContainer.innerHTML = `
+            <p>1. Start with the decimal number: ${decimalValue}</p>
+            <p>2. Divide the number by 2 and record the remainder:</p>
+            <ul>
+                ${steps.reverse().map(step => `<li>${step}</li>`).join('')}
+            </ul>
+            <p>3. Read the remainders from bottom to top to get the binary number.</p>
+        `;
+    });
+});
+</script>
+
+</body>
+</html>
